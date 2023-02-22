@@ -1,0 +1,11 @@
+.Mainmiddle{
+    width: 100%;
+}
+
+.submiddle{
+    width: 80%;
+    margin: auto;
+    margin-top: 138px;
+    text-align: center;
+    cursor: pointer;
+}
