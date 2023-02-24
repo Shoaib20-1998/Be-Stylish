@@ -25,6 +25,7 @@ import {
 } from '@chakra-ui/icons';
 import { ShoppingCartOutlined  } from '@ant-design/icons'
 import { Link as RouteLink } from 'react-router-dom';
+import Bag from '../../Pages/Bag';
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
 
@@ -163,7 +164,7 @@ const DesktopNav = () => {
         </Stack>             
       <Stack spacing={6}>
 
-      <ShoppingCartOutlined style={{ fontSize: '40px' }} />
+        <Bag />
       </Stack>
       
     </Stack>
