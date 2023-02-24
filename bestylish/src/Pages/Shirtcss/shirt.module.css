@@ -25,12 +25,23 @@
     
 }
 .singledata{
-    
+    font-family: sans-serif;
 }
 
-.singledata>button{
 
+.singledata>p,h2{
+    padding: 5px;
+    margin-top: 5px;
 }
+
+
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
 .detail{
     padding:15px 5px 5px 5px;
     display: flex;
@@ -47,6 +58,13 @@
 .datamap>Button{
     width: 100%;
 }
+
+
+
+/* add to cart button */
+
+
+
 @media screen and (max-width: 500px) {
     .maindiv{
         margin-top: 220px;
@@ -64,6 +82,9 @@
         grid-template-columns: repeat(2,1fr);
         gap: 15px;
     }
+    .singledata>div>button{
+        margin: 10px 20px 5px 20px;
+    }
 }
 
 @media screen and (min-width: 500px) and (max-width: 1000px) {
@@ -75,5 +96,8 @@
         display: grid;
         grid-template-columns: repeat(3,1fr);
         gap: 15px;
+    }
+    .singledata>div>button{
+        margin: 10px 20px 5px  20px;
     }
 }

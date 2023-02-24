@@ -1,1 +1,3 @@
-GET https://63f4cf5555677ef68bc45931.mockapi.io/style/shirts
+# GET https://63f4cf5555677ef68bc45931.mockapi.io/style/shirts?search=1019
+
+GET https://63f4cf5555677ef68bc45931.mockapi.io/style/cart
