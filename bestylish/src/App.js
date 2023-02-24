@@ -1,7 +1,9 @@
 import './App.css';
 import Navbar from './Landingpage/Navbar';
 import Main from './Landingpage/Main.jsx'
-
+import Shirts from './Pages/Shirts';
+import Allroutes from './Allroutespage/Allroutes';
+import LargeWithNewsletter from './Landingpage/Footer';
 function App() {
 
 
@@ -725,12 +727,11 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="App">     
      <Navbar />
-     
-      <Main />
-     
-
+     {/* <Main /> */}
+     <Allroutes />
+     <LargeWithNewsletter /> 
     </div>
   );
 }

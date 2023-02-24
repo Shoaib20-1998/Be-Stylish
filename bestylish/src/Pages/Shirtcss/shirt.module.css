@@ -1,0 +1,79 @@
+.maindiv{
+    margin-top: 140px;
+}
+.titlemain{
+   
+      
+}
+.title{
+    width: 80%;
+    margin: 5px auto;
+    text-align: left; 
+    padding: 5px;
+}
+.functionmain{
+    background-color:#F7F8F7 ;
+    padding: 10px;
+}
+.function{
+    width: 80%;
+    background-color:#F7F8F7 ;
+    text-align: left;
+    margin: auto;
+}
+.data{
+    
+}
+.singledata{
+    
+}
+
+.singledata>button{
+
+}
+.detail{
+    padding:15px 5px 5px 5px;
+    display: flex;
+    justify-content: space-around;
+}
+.datamap{
+    width: 80%;
+    margin: 10px auto ;
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+}
+.datamap>Button{
+    width: 100%;
+}
+@media screen and (max-width: 500px) {
+    .maindiv{
+        margin-top: 220px;
+    } 
+    .detail{
+        padding:15px 5px 20px 5px;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .datamap{
+        width: 80%;
+        margin: 10px auto ;
+        text-align: left;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 15px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+   
+    .datamap{
+        width: 80%;
+        margin: 10px auto ;
+        text-align: left;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 15px;
+    }
+}
