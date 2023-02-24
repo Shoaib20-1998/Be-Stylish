@@ -79,7 +79,6 @@ import ns5 from './Landingimg/Newstylesforu/ns5.jpg'
 import ns6 from './Landingimg/Newstylesforu/ns6.jpg'
 import ns7 from './Landingimg/Newstylesforu/ns7.jpg'
 import ns8 from './Landingimg/Newstylesforu/ns8.jpg'
-import LargeWithNewsletter from './Footer.jsx';
 function Middle() {
   return (
     <>
@@ -95,7 +94,7 @@ function Middle() {
           <Ourbenifits img={our3} name={our1} />
         </div>
         <Headingone text={"Unmissable Offers"} />
-        <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+        <div className={styles.box} style={{ display: "flex", justifyContent: "space-evenly" }}>
           <Boximg image={unm1} />
           <Boximg image={unm2} />
           <Boximg image={unm3} />
@@ -190,7 +189,7 @@ function Middle() {
         </div>
         <Headingone text={"New Styles For You"} />
 
-        <div style={{ display: "grid", gridTemplateColumns:"repeat(4,1fr)", gap:"20px" }}>
+        <div style={{ marginBottom:"30px", display: "grid", gridTemplateColumns:"repeat(4,1fr)", gap:"20px" }}>
           <Boximg image={ns1} />
           <Boximg image={ns2} />
           <Boximg image={ns3} />
@@ -203,7 +202,7 @@ function Middle() {
 
       </div>
     </div>
-    <LargeWithNewsletter />
+    
     </>
   )
 }

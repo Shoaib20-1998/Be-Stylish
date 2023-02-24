@@ -24,6 +24,7 @@ import {
   ChevronRightIcon,
 } from '@chakra-ui/icons';
 import { ShoppingCartOutlined  } from '@ant-design/icons'
+import { Link as RouteLink } from 'react-router-dom';
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
 
@@ -96,6 +97,7 @@ const DesktopNav = () => {
                   color: linkHoverColor,
                 }}>
                 {navItem.label}
+                
               </Link>
             </PopoverTrigger>
 
@@ -110,7 +112,9 @@ const DesktopNav = () => {
                 color={'black'}>
                 <Stack>
                   {navItem.children.map((child) => (
-                    <DesktopSubNav key={child.label} {...child} />
+                    <><DesktopSubNav key={child.label} {...child} />
+                    
+                    </>
                   ))}
 
                 </Stack>
@@ -168,6 +172,7 @@ const DesktopNav = () => {
 
 const DesktopSubNav = ({ label, href, subLabel }) => {
   return (
+    <RouteLink to="/shirts">
     <Link
       href={href}
       role={'group'}
@@ -197,6 +202,7 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
         </Flex>
       </Stack>
     </Link>
+    </RouteLink>
   );
 };
 

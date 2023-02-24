@@ -23,7 +23,7 @@ export default function Navbar() {
                         </div>
                     </div>
                 </div>
-                <div style={{width:"80%",margin:"auto"}}>
+                <div style={{width:"80%",margin:"auto",cursor:"pointer"}}>
                     <WithSubnavigation />                   
                 </div>
                 
