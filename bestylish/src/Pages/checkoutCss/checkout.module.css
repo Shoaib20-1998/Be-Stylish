@@ -1,0 +1,59 @@
+.Checkout{
+    margin-top: 150px;
+    
+}
+
+.Checkoutheading{
+ width: 80%;
+ margin: auto;
+ text-align: left;
+ font-size: 30px;
+ margin: 5px auto;
+ padding: 10px;
+}
+.Checkoutmain{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+}
+.data{
+    height: 1000px;
+    width: 50%;
+    border: 1px solid black;
+}
+.checkoutcart{
+    height: 1000px;
+    border: 1px solid red;
+    width: 50%;
+    margin: auto;
+
+}
+
+.map{
+    display: flex;
+    justify-content: space-around;
+    height: 300px;
+    width: 700px;
+    padding: 10px;
+    border: 3px dotted black;
+    border-radius: 10px;
+    margin: 5px auto;
+}
+.image{
+    width: 200px;
+    height: 200px;
+}
+.singledata{
+    text-align: left;
+    width: 50%;
+}
+.singledata,p,b,div>Button{
+    padding: 5px;
+    margin: 5px 7px;
+}
+.Bread{
+    margin: auto;
+    width: 80%;
+    text-align: left;
+}

@@ -163,7 +163,6 @@ const DesktopNav = () => {
           </Button>
         </Stack>             
       <Stack spacing={6}>
-
         <Bag />
       </Stack>
       
