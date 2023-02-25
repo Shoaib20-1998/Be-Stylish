@@ -2,6 +2,7 @@ import React from 'react'
 import {Routes,Route} from 'react-router-dom'
 import Main from '../Landingpage/Main'
 import Bag from '../Pages/Bag'
+import Checkout from '../Pages/Checkout'
 import Login from '../Pages/Login'
 import Shirts from '../Pages/Shirts'
 import Signup from '../Pages/Signup'
@@ -16,7 +17,10 @@ function Allroutes() {
             <Route path='/login' element={<Login /> }> </Route> 
             <Route path='/signup' element={<Signup /> }></Route> 
             <Route path='/cart' element={<Bag /> } ></Route>
+            
             <Route path='/shirts/:id' element={<Singleshirtpage /> } ></Route>
+            <Route path='/checkout' element={<Checkout /> } ></Route>
+
        </Routes>
     </>
   )

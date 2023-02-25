@@ -2,12 +2,11 @@ import { Box, Button, Card, CardBody, CardFooter, Center, Heading, Image, Stack,
 import axios from 'axios'
 import React from 'react'
 
-function Cart({title,size,price,image,id}) {
-
-    
+function Cart({title,size,price,image,id,fetchdataa}) {
 
     const handledelete=(id)=>{
-       axios.delete(`https://63f4cf5555677ef68bc45931.mockapi.io/style/cart/${id}`) 
+       axios.delete(`https://63f4cf5555677ef68bc45931.mockapi.io/style/cart/${id}`)
+       .then(()=>fetchdataa()) 
     }
 
 
@@ -24,7 +23,7 @@ function Cart({title,size,price,image,id}) {
                     objectFit='cover'
                     h={100}
                     w={100}
-                    src={image[0]}
+                    src={image}
                     alt='Caffe Latte'
                 />
 

@@ -15,11 +15,11 @@ function Bread() {
         </BreadcrumbItem>
 
         <BreadcrumbItem>
-          <BreadcrumbLink href='/'>Top Wear</BreadcrumbLink>
+          <BreadcrumbLink href='/shirts'>Top Wear</BreadcrumbLink>
         </BreadcrumbItem>
       
         <BreadcrumbItem isCurrentPage>
-          <BreadcrumbLink href='#'>Formal Shirts</BreadcrumbLink>
+          <BreadcrumbLink href='/shirts'>Formal Shirts</BreadcrumbLink>
         </BreadcrumbItem>
       </Breadcrumb>
       </>
