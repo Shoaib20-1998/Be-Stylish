@@ -40,8 +40,8 @@ export default function CaptionCarousel() {
 
   // These are the breakpoints which changes the position of the
   // buttons as the screen size changes
-  const top = useBreakpointValue({ base: '90%', md: '50%' });
-  const side = useBreakpointValue({ base: '30%', md: '40px' });
+  const top = useBreakpointValue({ base: '90%', md: '50%',sm:"30%" });
+  const side = useBreakpointValue({ base: '30%', md: '40px',sm:"20%"  });
 
   // This list contains all the data for carousels
   // This can be static or loaded from a server
@@ -93,7 +93,7 @@ export default function CaptionCarousel() {
   return (
     <Box
       position={'relative'}
-      height={'500px'}
+      height='500px'
       width={'full'}
       overflow={'hidden'}>
       {/* CSS files for react-slick */}
@@ -137,8 +137,7 @@ export default function CaptionCarousel() {
         {cards.map((card, index) => (
           <Box
             key={index}
-            height={'m'}
-            
+            height={['m']}                      
             position="relative"
             backgroundPosition="center"
             backgroundRepeat="no-repeat"

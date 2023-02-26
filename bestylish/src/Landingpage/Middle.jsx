@@ -88,7 +88,7 @@ function Middle() {
         <Sale img={sale1} name={"40% off"} />
         <Sale img={sale2} name={"60% off"} />
         <Headingone text={"Our Benefits"} />
-        <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+        <div className={styles.benifit} >
           <Ourbenifits img={our1} name={our1} />
           <Ourbenifits img={our2} name={our1} />
           <Ourbenifits img={our3} name={our1} />
