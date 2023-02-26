@@ -4,10 +4,13 @@ import axios from "axios"
 import React, { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import Cart from "./bagcomp/Cart"
-
+import { useContext } from "react"
+import { Auth } from "../Contextprovider/Auth"
+import InitialFocus from "./singleproductcomp/Modal"
 
 
 function Bag() {
+  const{isAuth}=useContext(Auth)
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
   const [data, setdata] = useState([])
@@ -64,7 +67,7 @@ function Bag() {
             <Button variant='outline' mr={3} onClick={onClose}>
               Cancel
             </Button>
-          <Link to="/checkout"><Button colorScheme='red'>Checkout</Button></Link>  
+          {isAuth?<Button colorScheme='red'><Link to="/checkout">Checkout</Link></Button>:<InitialFocus/>}  
           </DrawerFooter>
         </DrawerContent>
       </Drawer>

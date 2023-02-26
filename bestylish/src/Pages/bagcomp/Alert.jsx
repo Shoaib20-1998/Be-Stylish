@@ -5,29 +5,12 @@ function CompExample() {
       isOpen: isVisible,
       onClose,
       onOpen,
-    } = useDisclosure({ defaultIsOpen: true })
+    } = useDisclosure({ defaultIsOpen: false })
   
-    return isVisible ? (
-      <Alert status='success'>
-        <AlertIcon />
-        <Box>
-          <AlertTitle>Success!</AlertTitle>
-          <AlertDescription>
-            Your application has been received. We will review your application
-            and respond within the next 48 hours.
-          </AlertDescription>
-        </Box>
-        <CloseButton
-          alignSelf='flex-start'
-          position='relative'
-          right={-1}
-          top={-1}
-          onClick={onClose}
-        />
-      </Alert>
-    ) : (
-      <Button onClick={onOpen}>Show Alert</Button>
-    )
+    return <Alert status="success">
+    <AlertIcon />
+    Data uploaded to the server. Fire on!
+  </Alert>
   }
 
   export default CompExample;

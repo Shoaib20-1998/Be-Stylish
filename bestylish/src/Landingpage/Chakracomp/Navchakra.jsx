@@ -26,9 +26,13 @@ import {
 import { ShoppingCartOutlined  } from '@ant-design/icons'
 import { Link as RouteLink } from 'react-router-dom';
 import Bag from '../../Pages/Bag';
+import SignupCard from '../../Pages/Signup';
+import SimpleCard from '../../Pages/Login';
+import { useContext } from 'react';
+import { Auth } from '../../Contextprovider/Auth';
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
-
+  const {isAuth,name}=useContext(Auth)
   return (
     <Box>
       <Flex
@@ -79,7 +83,7 @@ const DesktopNav = () => {
   const linkColor = useColorModeValue('gray.600', 'gray.200');
   const linkHoverColor = useColorModeValue('gray.800', 'white');
   const popoverContentBgColor = useColorModeValue('white', 'gray.800');
-
+  const {isAuth,name,setisAuth}=useContext(Auth)
   return (
     <Stack p={"0"} direction={'row'} spacing={4}>
       {NAV_ITEMS.map((navItem) => (
@@ -135,7 +139,8 @@ const DesktopNav = () => {
           justify={'flex-end'}
           direction={'row'}
           spacing={2}>
-           <Button
+       {isAuth?<>
+        <Button
             as={'a'}
             display={{ base: 'none', md: 'inline-flex' }}
             fontSize={'sm'}
@@ -145,10 +150,40 @@ const DesktopNav = () => {
             href={'#'}
             _hover={{
               bg: 'black',
-            }}>
+            }} >
+            {name}
+          </Button>
+          
+       <Button
+            as={'a'}
+            display={{ base: 'none', md: 'inline-flex' }}
+            fontSize={'sm'}
+            fontWeight={600}
+            color={'white'}
+            bg={'#ED1C24'}
+            href={'#'}
+            _hover={{
+              bg: 'black',
+            }} onClick={()=>setisAuth(!isAuth)}> 
+              
+            Log out
+          </Button>
+       </>:<>
+       <RouteLink to="/login"><Button
+            as={'a'}
+            display={{ base: 'none', md: 'inline-flex' }}
+            fontSize={'sm'}
+            fontWeight={600}
+            color={'white'}
+            bg={'#ED1C24'}
+            href={'#'}
+            _hover={{
+              bg: 'black',
+            }} onClick={()=><SimpleCard />}>
             Sign in
           </Button>
-          <Button
+          </RouteLink> 
+      <RouteLink to="/signup"><Button
             as={'a'}
             display={{ base: 'none', md: 'inline-flex' }}
             fontSize={'sm'}
@@ -158,9 +193,11 @@ const DesktopNav = () => {
             href={'#'}
             _hover={{
               bg: 'black',
-            }}>
+            }} onClick={()=><SignupCard />}> 
+              
             Sign Up
           </Button>
+       </RouteLink></>}
         </Stack>             
       <Stack spacing={6}>
         <Bag />
@@ -286,22 +323,22 @@ const NAV_ITEMS = [
       {
         label: 'Ethnic & Fusion Wear',
         subLabel: 'Kurtas & Kurtis',
-        href: '#',
+        href: '/shirts',
       },
       {
         label: 'Lingerie/Sleepwear/Tracksuits',
         subLabel: 'Nightwear/Shapeswear',
-        href: '#',
+        href: '/shirts',
       },
       {
         label: 'Sports Wear/Regular Wear',
         subLabel: 'Joggers And Tracks',
-        href: '#',
+        href: '/shirts',
       },
       {
         label: 'Wastern Wear/cultural Wear',
         subLabel: 'Top & tees',
-        href: '#',
+        href: '/shirts',
       },
     ],
   },
@@ -312,22 +349,22 @@ const NAV_ITEMS = [
       {
         label: 'Bottom Wear',
         subLabel: 'Jeans',
-        href: '#',
+        href: '/shirts',
       },
       {
         label: 'Winter Wear',
         subLabel: 'Jackets',
-        href: '#',
+        href: '/shirts',
       },
       {
         label: 'Top Wear',
         subLabel: 'Formal Shirt',
-        href: '#',
+        href: '/shirts',
       },
       {
         label: 'Active Wear',
         subLabel: 'Polos',
-        href: '#',
+        href: '/shirts',
       },
     ],
   },
@@ -337,22 +374,22 @@ const NAV_ITEMS = [
       {
         label: 'BOYS',
         subLabel: 'Shirt/Jeans',
-        href: '#',
+        href: '/shirts',
       },
       {
         label: 'GIRLS',
         subLabel: 'Top/jeans',
-        href: '#',
+        href: '/shirts',
       },
       {
         label: 'Top Brands',
         subLabel: 'Benatton',
-        href: '#',
+        href: '/shirts',
       },
       {
         label: 'Price Point',
         subLabel: 'Under 299',
-        href: '#',
+        href: '/shirts',
       },
     ],
   },
@@ -362,22 +399,22 @@ const NAV_ITEMS = [
       {
         label: 'Woman Top Brands',
         subLabel: 'Flip flops & Sliders',
-        href: '#',
+        href: '/shirts',
       },
       {
         label: 'Man Top Brands',
         subLabel: 'U.S.Polo Assn',
-        href: '#',
+        href: '/shirts',
       },
       {
         label: 'Boys Top Brands',
         subLabel: 'Code',
-        href: '#',
+        href: '/shirts',
       },
       {
         label: 'Girls Top Brands',
         subLabel: 'Ginger',
-        href: '#',
+        href: '/shirts',
       },
     ],
   },
@@ -388,22 +425,22 @@ const NAV_ITEMS = [
       {
         label: 'Men Grooming & Styles',
         subLabel: 'Haircare/Facewash',
-        href: '#',
+        href: '/shirts',
       },
       {
         label: 'Skin Care & Face',
         subLabel: 'Masks/Serum',
-        href: '#',
+        href: '/shirts',
       },
       {
         label: 'Bath & Body',
         subLabel: 'Soaps & cup',
-        href: '#',
+        href: '/shirts',
       },
       {
         label: 'Fragrences',
         subLabel: 'Sets & deo',
-        href: '#',
+        href: '/shirts',
       },
     ],
   },

@@ -16,11 +16,17 @@ import {
   List,
   ListItem,
 } from '@chakra-ui/react';
+
+import { useContext } from 'react';
 import axios from 'axios';
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { MdLocalShipping } from 'react-icons/md';
+import swal from 'sweetalert';
 import Headingone from '../../Landingpage/Middlecomponent/Heading';
 import styles from '../Shirtcss/shirt.module.css'
+import InitialFocus from './Modal';
+import {Auth} from '../../Contextprovider/Auth'
+import { Link } from 'react-router-dom';
 //   ={data.title}
 //       color={data.Color}
 //       size={data.Size}
@@ -31,7 +37,7 @@ import styles from '../Shirtcss/shirt.module.css'
 //       price
 
 export default function Simple(data) {
-
+const{isAuth,setisAuth}=useContext(Auth)
 const{ brand, image, price, title, discount, Size,id }=data;
 
   const fetchdata=()=>{
@@ -40,10 +46,11 @@ const{ brand, image, price, title, discount, Size,id }=data;
        brand, price,image:image[0], title, discount, size:Size 
     })
     .then(()=>{
-     alert("item addedd successfully")
+      swal("item Added To Your Cart", "Go to The Cart for Checking Out The item", "success")
     })
 }
   
+
   return (
     <Container maxW={'7xl'}>
       <SimpleGrid
@@ -174,7 +181,7 @@ const{ brand, image, price, title, discount, Size,id }=data;
           </Text>
           <div className={styles.singlbuttons}>
             <Button onClick={fetchdata} colorScheme='red'>Add To Cart</Button>
-            <Button colorScheme='red'>Buy Now</Button>
+            {isAuth?  <Button colorScheme='red'><Link to="/checkout">Checkout Now</Link></Button>:<InitialFocus />}
           </div>
           <Stack direction="row" alignItems="center" justifyContent={'center'}>
             <MdLocalShipping />
