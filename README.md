@@ -1,1 +1,1 @@
-# general-zebra-503
+<h1 align="center">Be Stylish : Clone of lifestyle</h1>
