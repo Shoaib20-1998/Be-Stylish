@@ -1,1 +1,1 @@
-<h1 align="center">Be Stylish : Clone of lifestyle</h1>
+<h1 >Be Stylish : Clone of lifestyle</h1>
