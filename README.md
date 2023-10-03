@@ -51,7 +51,6 @@ be stylish is a full-fledged fashion e-commerce website that offers a wide range
 - **Signup:** /signup
 - **Login:** /login
 - **Checkout:** /checkout
-- 
 ## Website Screenshots
 ![be stylish](https://github.com/Shoaib20-1998/Be-Stylish/assets/112754545/fa0d3846-36b1-4614-b59b-d3c6b3ee329d)
 ![Screenshot (2996)](https://github.com/Shoaib20-1998/Be-Stylish/assets/112754545/19969bcb-de5d-4b8f-9a84-d0df9e0bedd0)
