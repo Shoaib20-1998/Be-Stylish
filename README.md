@@ -9,9 +9,7 @@
   <a href="#tech-stack">Tech Stack</a> •
   <a href="#project-routes">Project Routes</a> •
   <a href="#getting-started">Getting Started</a> •
-  <a href="#contributing">Contributing</a> •
-  <a href="#license">License</a> •
-  <a href="#acknowledgments">Acknowledgments</a>
+  <a href="#website-screenshots">Screenshots</a> 
 </p>
 
 ---
@@ -53,6 +51,15 @@ be stylish is a full-fledged fashion e-commerce website that offers a wide range
 - **Signup:** /signup
 - **Login:** /login
 - **Checkout:** /checkout
+- 
+## Website Screenshots
+![be stylish](https://github.com/Shoaib20-1998/Be-Stylish/assets/112754545/fa0d3846-36b1-4614-b59b-d3c6b3ee329d)
+![Screenshot (2996)](https://github.com/Shoaib20-1998/Be-Stylish/assets/112754545/19969bcb-de5d-4b8f-9a84-d0df9e0bedd0)
+![Screenshot (2997)](https://github.com/Shoaib20-1998/Be-Stylish/assets/112754545/b8173c80-aa72-4e62-ac09-4fe18b30cf1c)
+![Screenshot (2998)](https://github.com/Shoaib20-1998/Be-Stylish/assets/112754545/2a573c7f-f699-4886-bd89-667f6c8acfea)
+![Screenshot (2999)](https://github.com/Shoaib20-1998/Be-Stylish/assets/112754545/2ae3ec48-57ef-418d-871c-84f59aeb100f)
+![Screenshot (3000)](https://github.com/Shoaib20-1998/Be-Stylish/assets/112754545/9dc3cec1-f55e-4388-8f10-9d4e691a39fd)
+![Screenshot (3001)](https://github.com/Shoaib20-1998/Be-Stylish/assets/112754545/de4eaf94-00c7-4922-b6f7-e1f2a6d15e8a)
 
 ## Getting Started
 
